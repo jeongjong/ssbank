@@ -218,7 +218,7 @@ public class MyUtil {
 		if(html==null||html.length()==0)
 			return result;
 
-		String regex="<img[^>]*src=[\"']?([^>\"']+)[\"']?[^>]*>";
+		String regex="<img[^>]*src=[\"']?([^>\"']+)[\"']?[^>]*>"; // 정규식
 		Pattern nonValidPattern = Pattern.compile(regex);
 
 		Matcher matcher = nonValidPattern.matcher(html);
