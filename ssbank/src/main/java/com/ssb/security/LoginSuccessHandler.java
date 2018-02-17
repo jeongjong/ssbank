@@ -1,4 +1,4 @@
-package com.sp.security;
+package com.ssb.security;
 
 import java.io.IOException;
 
