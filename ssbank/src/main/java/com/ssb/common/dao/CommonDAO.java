@@ -1,4 +1,4 @@
-package com.sp.common.dao;
+package com.ssb.common.dao;
 
 import java.util.List;
 import java.util.Map;
