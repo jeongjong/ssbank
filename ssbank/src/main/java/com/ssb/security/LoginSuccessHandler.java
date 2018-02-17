@@ -16,7 +16,6 @@ import com.ssb.member.MemberService;
 import com.ssb.member.SessionInfo;
 
 
-
 // 로그인 성공후 세션 및 쿠키등의 처리를 할 수 있다.
 // 로그인 전 정보를 Cache : 로그인 되지 않은 상태에서 로그인 상태에서만 사용할 수 있는 페이지로 이동할 경우 로그인 페이지로 이동하고 로그인 후 로그인 전 페이지로 이동
 public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
@@ -29,7 +28,7 @@ public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessH
 			throws ServletException, IOException {
 		HttpSession session=req.getSession();
 		
-		// System.out.println(authentication.getName()); // 로그인 아이디
+		System.out.println(authentication.getName()); // 로그인 아이디
 		
 		// 로그인 날짜 변경
 		memberService.updateLastLogin(authentication.getName());

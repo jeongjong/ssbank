@@ -11,7 +11,7 @@ public class Member {
 	private String address,add1,add2;
 	private int enabled; //계정상태확인
 	private String authority;
-	private String created_date,modify_date,last_login;
+	private String created_date, modify_date, last_login;
 	private int investmentScore;
 	public String getUserId() {
 		return userId;
