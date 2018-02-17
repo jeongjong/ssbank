@@ -86,15 +86,6 @@ public class MemberServiceImpl implements MemberService {
 
 	}
 
-	@Override
-	public int updateLatLogin(String userId) {
-		int result =0;
-		try {
-			result = dao.updateData("member.updateLatLogin",userId);
-		} catch (Exception e) {
-		}
-		return result;
-	}
 
 	
 
@@ -159,6 +150,16 @@ public class MemberServiceImpl implements MemberService {
 		int result =0;
 		try {
 			result = dao.deleteData("member.deleteMember",map);
+		} catch (Exception e) {
+		}
+		return result;
+	}
+
+	@Override
+	public int updateLastLogin(String userId) {
+		int result =0;
+		try {
+			result = dao.updateData("member.updateLatLogin",userId);
 		} catch (Exception e) {
 		}
 		return result;

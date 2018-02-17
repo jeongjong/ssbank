@@ -16,25 +16,33 @@ public class MemberController {
 	private MemberService service;
 	
 	@RequestMapping(value="/member/login",method=RequestMethod.GET)
-	public String loginForm() {
+	public String loginForm(String login_error,Model model, HttpSession session) {
+		
+		boolean bLoginError = login_error != null;
+		
+		String msg ="";
+		if(bLoginError) {
+			msg="아이디 또는 패스워드를 잘못 입력 하셨습니다.";
+			model.addAttribute("message", msg);
+		}
 		return ".member.login";
 	}
-	@RequestMapping(value="/member/login",method=RequestMethod.POST)
-	public String loginSubmit(
-			@RequestParam String userId,
-			@RequestParam String userPwd,
-			HttpSession session,
-			Model model
-			) {
+	
+	@RequestMapping(value="/member/noAuthorized")
+	public String noAuthorized() {
+		// 접근 오서라이제이션(Authorization:권한)이 없는 경우
 		
-		String uri=(String)session.getAttribute("preLoginURI");
-		session.removeAttribute("preLoginURI");
-		if(uri==null)
-			uri="redirect:/";
-		else 
-			uri="redirect:"+uri;
-		return uri;
+		return ".member.noAuthorized";
 	}
+	
+	@RequestMapping(value="/member/expired")
+	public String expired() {
+		// 세션이 만료 된 경우
+		
+		return ".member.expired";
+	}
+	
+
 	
 
 }
