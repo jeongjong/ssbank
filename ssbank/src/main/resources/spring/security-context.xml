@@ -70,7 +70,7 @@
 	</http>
 
 	<beans:bean id="loginSuccessHandler"
-               class="com.sp.security.LoginSuccessHandler"/>
+               class="com.ssb.security.LoginSuccessHandler"/>
                
      <jdbc-user-service 
          data-source-ref="dataSource"
