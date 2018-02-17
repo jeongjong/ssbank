@@ -1,4 +1,4 @@
-package com.sp.common;
+package com.ssb.common;
 
 import java.util.List;
 import java.util.Map;
