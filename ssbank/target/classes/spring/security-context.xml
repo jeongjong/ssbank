@@ -85,7 +85,7 @@
 	</authentication-manager>
 
 	<!-- AJAX 작업에서 예외가 발생한 경우 실행할 필터 -->
-	<beans:bean id="ajaxSessionTimeoutFilter" class="com.sp.security.AjaxSessionTimeoutFilter">
+	<beans:bean id="ajaxSessionTimeoutFilter" class="com.ssb.security.AjaxSessionTimeoutFilter">
 		<beans:property name="ajaxHeader" value="AJAX" />
 	</beans:bean>
 
