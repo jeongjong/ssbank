@@ -1,83 +1,26 @@
 package com.ssb.financial.account;
-/*
- 	proCode - 상품코드
- 	proCodeName - 상품코드명
- 	rate - 이율
-	detail - 상세설명
-	
-	bankCode - 지점코드
-	userId - 개인계정
-	userPwd - 개인계정비밀번호
-	
-	accountNum -계좌번호
-	balance-잔액
-	createAccount-계좌생성일
-	lastDeal-최종거래일
-	accountState-계좌상태
 
- */
 public class Account {
-	
-	private String proCode,proCodeName;
-	private int rate;
-	private String detail;
-	
-	private String bankCode;
-	private String userId;
-	private String userPwd;
-	
-	private String accountNum;
+	//예금/적금조회
+	private String accountNo;
 	private int balance;
-	private String createAccount;
-	private String lastDeal;
-	private String accountState;
-	public String getProCode() {
-		return proCode;
+	private int branchIdx,productIdx,interestRate,status,defaultInterest,vipInterest,tax,monthlyAmount;
+	private String productName,productDetail,productType;
+	private String createDate,entryDate,userId,accountPwd,savingType,interestType;
+	
+	//신규
+	private int memberIdx;
+	private String lastName,firstName,birth;
+	private String addr1,addr2;
+	private int zipCode,tel;
+	
+	
+	
+	public String getAccountNo() {
+		return accountNo;
 	}
-	public void setProCode(String proCode) {
-		this.proCode = proCode;
-	}
-	public String getProCodeName() {
-		return proCodeName;
-	}
-	public void setProCodeName(String proCodeName) {
-		this.proCodeName = proCodeName;
-	}
-	public int getRate() {
-		return rate;
-	}
-	public void setRate(int rate) {
-		this.rate = rate;
-	}
-	public String getDetail() {
-		return detail;
-	}
-	public void setDetail(String detail) {
-		this.detail = detail;
-	}
-	public String getBankCode() {
-		return bankCode;
-	}
-	public void setBankCode(String bankCode) {
-		this.bankCode = bankCode;
-	}
-	public String getUserId() {
-		return userId;
-	}
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	public String getUserPwd() {
-		return userPwd;
-	}
-	public void setUserPwd(String userPwd) {
-		this.userPwd = userPwd;
-	}
-	public String getAccountNum() {
-		return accountNum;
-	}
-	public void setAccountNum(String accountNum) {
-		this.accountNum = accountNum;
+	public void setAccountNo(String accountNo) {
+		this.accountNo = accountNo;
 	}
 	public int getBalance() {
 		return balance;
@@ -85,23 +28,155 @@ public class Account {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
-	public String getCreateAccount() {
-		return createAccount;
+	public int getBranchIdx() {
+		return branchIdx;
 	}
-	public void setCreateAccount(String createAccount) {
-		this.createAccount = createAccount;
+	public void setBranchIdx(int branchIdx) {
+		this.branchIdx = branchIdx;
 	}
-	public String getLastDeal() {
-		return lastDeal;
+	public int getProductIdx() {
+		return productIdx;
 	}
-	public void setLastDeal(String lastDeal) {
-		this.lastDeal = lastDeal;
+	public void setProductIdx(int productIdx) {
+		this.productIdx = productIdx;
 	}
-	public String getAccountState() {
-		return accountState;
+	public int getInterestRate() {
+		return interestRate;
 	}
-	public void setAccountState(String accountState) {
-		this.accountState = accountState;
+	public void setInterestRate(int interestRate) {
+		this.interestRate = interestRate;
+	}
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public String getProductDetail() {
+		return productDetail;
+	}
+	public void setProductDetail(String productDetail) {
+		this.productDetail = productDetail;
+	}
+	public String getCreateDate() {
+		return createDate;
+	}
+	public void setCreateDate(String createDate) {
+		this.createDate = createDate;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public String getAccountPwd() {
+		return accountPwd;
+	}
+	public void setAccountPwd(String accountPwd) {
+		this.accountPwd = accountPwd;
+	}
+	public int getDefaultInterest() {
+		return defaultInterest;
+	}
+	public void setDefaultInterest(int defaultInterest) {
+		this.defaultInterest = defaultInterest;
+	}
+	public int getVipInterest() {
+		return vipInterest;
+	}
+	public void setVipInterest(int vipInterest) {
+		this.vipInterest = vipInterest;
+	}
+	public int getTax() {
+		return tax;
+	}
+	public void setTax(int tax) {
+		this.tax = tax;
+	}
+	public int getMonthlyAmount() {
+		return monthlyAmount;
+	}
+	public void setMonthlyAmount(int monthlyAmount) {
+		this.monthlyAmount = monthlyAmount;
+	}
+	public String getProductType() {
+		return productType;
+	}
+	public void setProductType(String productType) {
+		this.productType = productType;
+	}
+	public String getEntryDate() {
+		return entryDate;
+	}
+	public void setEntryDate(String entryDate) {
+		this.entryDate = entryDate;
+	}
+	public String getSavingType() {
+		return savingType;
+	}
+	public void setSavingType(String savingType) {
+		this.savingType = savingType;
+	}
+	public String getInterestType() {
+		return interestType;
+	}
+	public void setInterestType(String interestType) {
+		this.interestType = interestType;
+	}
+	public int getMemberIdx() {
+		return memberIdx;
+	}
+	public void setMemberIdx(int memberIdx) {
+		this.memberIdx = memberIdx;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getBirth() {
+		return birth;
+	}
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+	public String getAddr1() {
+		return addr1;
+	}
+	public void setAddr1(String addr1) {
+		this.addr1 = addr1;
+	}
+	public String getAddr2() {
+		return addr2;
+	}
+	public void setAddr2(String addr2) {
+		this.addr2 = addr2;
+	}
+	public int getZipCode() {
+		return zipCode;
+	}
+	public void setZipCode(int zipCode) {
+		this.zipCode = zipCode;
+	}
+	public int getTel() {
+		return tel;
+	}
+	public void setTel(int tel) {
+		this.tel = tel;
 	}
 	
 	

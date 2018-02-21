@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.ssb.common.dao.CommonDAO;
 
-@Service("product.productServiceImpl")
+@Service("product.productService")
 public class ProductServiceImpl {
 	@Autowired
 	private CommonDAO dao;

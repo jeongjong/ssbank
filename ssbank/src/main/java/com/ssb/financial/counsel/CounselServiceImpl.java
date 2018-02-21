@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.ssb.common.dao.CommonDAO;
 
-@Service("counsel.counselServiceImpl")
+@Service("counsel.counselService")
 public class CounselServiceImpl {
 	
 	@Autowired
