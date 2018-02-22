@@ -7,6 +7,6 @@ import com.ssb.common.dao.CommonDAO;
 
 @Service("product.productService")
 public class ProductServiceImpl {
-	@Autowired
-	private CommonDAO dao;
+//	@Autowired
+//	private CommonDAO dao;
 }

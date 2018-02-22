@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 @Controller("fund.fundController")
 public class FundController {
 	
-	@Autowired
-	private FundService service;
+//	@Autowired
+//	private FundService service;
 
 }

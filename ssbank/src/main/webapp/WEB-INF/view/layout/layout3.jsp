@@ -36,9 +36,11 @@
 	    <tiles:insertAttribute name="header"/>
 	</div>
 		
-	<div class="container">
-	    <tiles:insertAttribute name="body"/>
-	</div>
+	<section class="container">
+		<div class="content">
+	   		<tiles:insertAttribute name="body"/>
+	   	</div>
+	</section>
 	
 	<div class="footer">
 	    <tiles:insertAttribute name="footer"/>

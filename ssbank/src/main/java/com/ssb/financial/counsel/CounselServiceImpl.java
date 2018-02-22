@@ -8,7 +8,7 @@ import com.ssb.common.dao.CommonDAO;
 @Service("counsel.counselService")
 public class CounselServiceImpl {
 	
-	@Autowired
-	private CommonDAO dao;
+//	@Autowired
+//	private CommonDAO dao;
 
 }

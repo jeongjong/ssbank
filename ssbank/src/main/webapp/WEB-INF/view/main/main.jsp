@@ -4,9 +4,7 @@
 <%
    String cp = request.getContextPath();
 %>
-
-	<section class="container">
-		<div class="content">
+		
 			<section class="main-visual">
 				<div class="owl-carousel owl-theme slider">
 					<div class="item">
@@ -165,19 +163,3 @@
 					</div>
 				</section>
 			</section>
-		</div>
-	</section>
-	<aside>
-		<div class="side-bar">
-			<ul>
-				<li><a href="#">계산기</a></li>
-				<li><a href="#">위치찾기</a></li>
-				<li><a href="#">문의하기</a></li>
-				<li>
-					<span class="tel">1588<br>3082</span>
-					<span class="time">평일<br>09:00~17:50</span>
-				</li>
-				<a href="#" class="btn-top">TOP</a>
-			</ul>
-		</div>
-	</aside>

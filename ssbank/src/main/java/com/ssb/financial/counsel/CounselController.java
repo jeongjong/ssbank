@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 
 @Controller("counsel.counselController")
 public class CounselController {
-	@Autowired
-	private CounselService service;
+//	@Autowired
+//	private CounselService service;
 
 }

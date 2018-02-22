@@ -5,6 +5,6 @@ import org.springframework.stereotype.Controller;
 
 @Controller("loan.loanController")
 public class LoanController {
-	@Autowired
-	private LoanService service;
+//	@Autowired
+//	private LoanService service;
 }
