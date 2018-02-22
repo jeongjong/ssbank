@@ -8,36 +8,90 @@
 // String path = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+cp;
 %>
 
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>spring</title>
+<title>쌍용은행 - SS BANK</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<link rel="stylesheet" href="<%=cp%>/resource/css/base.css" media="all" type="text/css">
+<link rel="stylesheet" href="<%=cp%>/resource/css/owl.carousel.min.css">
+<link rel="stylesheet" href="<%=cp%>/resource/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="<%=cp%>/resource/css/common.css" media="all" type="text/css">
+<link rel="stylesheet" href="<%=cp%>/resource/css/layout.css" media="all" type="text/css">
 
-<link rel="stylesheet" href="<%=cp%>/resource/css/style.css" type="text/css">
-<link rel="stylesheet" href="<%=cp%>/resource/css/layout.css" type="text/css">
 <link rel="stylesheet" href="<%=cp%>/resource/jquery/css/smoothness/jquery-ui.min.css" type="text/css">
-
-<script type="text/javascript" src="<%=cp%>/resource/js/util.js"></script>
 <script type="text/javascript" src="<%=cp%>/resource/jquery/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="<%=cp%>/resource/js/common.js"></script>
+<script type="text/javascript" src="<%=cp%>/resource/js/owl.carousel.js"></script>
+<script type="text/javascript" src="<%=cp%>/resource/js/util.js"></script>
+
 </head>
 
 <body>
 
-<div class="header">
-    <tiles:insertAttribute name="header"/>
-</div>
+<div id="wrap" class="main">
+	<div class="header">
+	    <tiles:insertAttribute name="header"/>
+	</div>
+		
+	<section class="container">
+		<div class="content">
+	   		<tiles:insertAttribute name="body"/>
+	   	</div>
+	</section>
 	
-<div class="container">
-    <tiles:insertAttribute name="body"/>
-</div>
-
-<div class="footer">
-    <tiles:insertAttribute name="footer"/>
+	<div class="footer">
+	    <tiles:insertAttribute name="footer"/>
+	</div>
 </div>
 
 <script type="text/javascript" src="<%=cp%>/resource/jquery/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<%=cp%>/resource/jquery/js/jquery.ui.datepicker-ko.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.main-visual .slider').owlCarousel({
+			loop:true,
+			margin:0,
+			nav:false,
+			dots:true,
+			autoWidth:false,
+			items:1,
+			autoHeight:false
+		})
 
+		$('.recommand-visual .slider').owlCarousel({
+			loop:true,
+			margin:31,
+			nav:false,
+			dots:false,
+			autoWidth:false,
+			items:3,
+			autoHeight:true,
+			autoplay:true,
+			autoplayTimeout:4000,
+			autoplayHoverPause:true
+		})
+
+		$(".tab_content").hide();
+		$(".tab_content:first").show();
+
+		$("ul.tabs li").click(function () {
+			$("ul.tabs li").removeClass("active");
+			$(this).addClass("active");
+			$(".tab_content").hide()
+				var activeTab = $(this).attr("rel");
+			$("#" + activeTab).fadeIn()
+		});
+	})
+
+	$(function(){
+		$(".btn-gnb").click(function(){
+			$(this).toggleClass("change");
+		});
+	});
+
+</script>
 </body>
 </html>

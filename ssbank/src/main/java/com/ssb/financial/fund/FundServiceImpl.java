@@ -8,7 +8,7 @@ import com.ssb.common.dao.CommonDAO;
 @Service("fund.fundService")
 public class FundServiceImpl {
 	
-	@Autowired
-	private CommonDAO dao;
+//	@Autowired
+//	private CommonDAO dao;
 
 }

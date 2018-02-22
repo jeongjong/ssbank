@@ -8,7 +8,7 @@ import com.ssb.common.dao.CommonDAO;
 @Service("loan.loanService")
 public class LoanServiceImpl {
 	
-	@Autowired
-	private CommonDAO dao;
+//	@Autowired
+//	private CommonDAO dao;
 
 }
