@@ -3,6 +3,7 @@ package com.ssb.financial.fund;
 public class Fund {
 	
 	
+	
 		//신규
 		private int memberIdx;
 		private String lastName,firstName,birth;
