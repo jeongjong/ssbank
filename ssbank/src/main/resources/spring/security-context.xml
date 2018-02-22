@@ -64,7 +64,7 @@
     	              after="EXCEPTION_TRANSLATION_FILTER"/>
     	              
 	         <!-- 동일 아이디로 동시에 1명만 접속(기존 세션 만료) -->
-			<session-management>
+			<session-management invalid-session-url="/member/login">
 				<concurrency-control max-sessions="1" expired-url="/member/expired"/>
 			</session-management>	        
 	</http>
