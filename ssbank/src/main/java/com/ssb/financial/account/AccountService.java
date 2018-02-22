@@ -15,6 +15,9 @@ public interface AccountService {
 	public List<Account> listAllAccount(Map<String, Object> map); 
 	public List<Account> listOneAccount(Map<String , Object> map);
 	public Account detailAccount(int accountNo);
+	public List<Account>  listAllSavingsProduct(Map<String, Object> map);
+	public List<Account>  listOneSavingsProduct(Map<String, Object> map);
+	public Account detailSavingProduct(int accountNo);
 	public int insertSaveAccount(Account dto);
 	public int deleteSaveAccount(Map<String, Object> map);
 	public int deleteCheckSaveAccount(Map<String, Object> map);

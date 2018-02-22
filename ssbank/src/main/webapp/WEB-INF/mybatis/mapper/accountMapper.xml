@@ -3,6 +3,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="account">
 
- 
+ <select id="listAllAccount" parameterType="map" resultType="com.ssb.financial.Account">
+   SELECT productName,a.accountNo,banlance 
+   FROM account a
+   JOIN product p on a.productId =p.productId
+   JOIN transaction t ON a.accountNo = t.accountNo	
+ </select>
 
 </mapper>
